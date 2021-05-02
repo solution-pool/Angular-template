@@ -1,0 +1,30 @@
+<div [class.is-mobile]="isMobile" [ngClass]="{'dark-theme': isDarkTheme | async}" class="home"
+     fxLayout="column">
+
+  <app-home-toolbar (signOut)="signOut()" (toggle)="sidebar.toggle()" [isMobile]="isMobile"
+                    [name]="name"></app-home-toolbar>
+
+  <mat-sidenav-container class="home__sidenav-container mat-app-background">
+
+    <mat-sidenav #sidebar [fixedInViewport]="isMobile" [mode]="isMobile ? 'over' : 'side'"
+                 class="home__sidebar" fixedTopGap="66" opened>
+      <app-home-sidebar [menus]="menus"></app-home-sidebar>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="home__content" fxLayout="column">
+
+      <ngx-simplebar [options]="{autoHide: false, scrollbarMinSize: 100}" fxFlex="calc(100% - 66px)">
+
+        <main fxLayout="column">
+          <router-outlet></router-outlet>
+        </main>
+
+        <app-home-footer></app-home-footer>
+
+      </ngx-simplebar>
+
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+</div>
+

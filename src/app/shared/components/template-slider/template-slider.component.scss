@@ -1,0 +1,107 @@
+.template-slider {
+
+  &__slider {
+    width: 100%;
+  }
+
+  &__footer {
+    margin-top: -10px;
+  }
+
+  ::ng-deep {
+
+    .mat-slider.mat-slider-horizontal {
+      padding: 0;
+    }
+
+    .mat-slider.mat-slider-horizontal .mat-slider-wrapper {
+      top: 18px;
+      left: 0;
+      right: 0;
+    }
+
+    .mat-slider.mat-slider-horizontal .mat-slider-track-wrapper {
+      height: 5px;
+      border-radius: 10px
+    }
+
+    .mat-slider.mat-slider-horizontal .mat-slider-track-background,
+    .mat-slider.mat-slider-horizontal .mat-slider-track-fill {
+      height: 100%;
+    }
+
+    .mat-slider-track-background {
+      background-color: #E9E9E9;
+    }
+
+    .mat-accent .mat-slider-thumb, .mat-primary .mat-slider-thumb {
+      pointer-events: all;
+      height: 32px;
+      width: 32px;
+      background-color: #F1F1F1;
+      border: solid 4px #ffffff !important;
+      bottom: -17px;
+      right: -20px;
+      transform: none !important;
+
+      &:hover {
+        background-color: #D0D0D0;
+      }
+
+      &:before {
+        content: url(./arrow_right.svg);
+        position: absolute;
+        bottom: 5px;
+        left: 8px;
+        width: 16px;
+        height: 16px;
+      }
+
+      &:after {
+        content: url(./arrow_left.svg);
+        position: absolute;
+        bottom: 5px;
+        left: -2px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .mat-slider-min-value:not(.mat-slider-thumb-label-showing) .mat-slider-thumb {
+      height: 32px;
+      width: 32px;
+      background-color: #F1F1F1;
+      border: solid 4px #ffffff;
+
+      &:hover {
+        background-color: #D0D0D0;
+      }
+
+      &:after {
+        content: url(./arrow_left_disabled.svg);
+      }
+    }
+
+    .mat-slider-disabled .mat-slider-thumb {
+
+      &:before {
+        content: url(./arrow_right_disabled.svg);
+      }
+
+      &:after {
+        content: url(./arrow_left_disabled.svg);
+      }
+    }
+
+    .mat-slider-horizontal.is-full .mat-slider-thumb {
+
+      &:before {
+        content: url(./arrow_right_disabled.svg);
+      }
+    }
+  }
+
+  .is-hidden {
+    display: none;
+  }
+}

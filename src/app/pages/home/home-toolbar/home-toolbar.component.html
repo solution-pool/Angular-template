@@ -1,0 +1,41 @@
+<mat-toolbar class="home-toolbar" color="{{(isDarkTheme | async) ? 'none' : 'primary'}}">
+  <mat-toolbar-row class="home-toolbar__row">
+
+    <button (click)="onToggle()" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <a [routerLink]="['/home']" class="home-toolbar__logo" fxFlex fxLayout="row">
+      Angular Template
+    </a>
+
+    <div class="mr-8px" fxLayout="row">
+      <mat-icon class="mr-8px">brightness_5</mat-icon>
+      <mat-slide-toggle (change)="toggleDarkTheme($event.checked)" [checked]="isDarkTheme | async">
+      </mat-slide-toggle>
+      <mat-icon class="ml-8px">nights_stay</mat-icon>
+    </div>
+
+
+    <button class="mr-8px" mat-icon-button matTooltip="Notificaciones">
+      <mat-icon>notifications_none</mat-icon>
+    </button>
+
+    <ngx-avatar [matMenuTriggerFor]="menu" [name]="firstName"
+                class="pointer"></ngx-avatar>
+    <mat-menu #menu="matMenu">
+      <span class="home-toolbar__name" mat-menu-item>{{name}}</span>
+      <mat-divider></mat-divider>
+      <button [routerLink]="['profile']" mat-menu-item>
+        <mat-icon>perm_identity</mat-icon>
+        <span> Perfil </span>
+      </button>
+      <mat-divider></mat-divider>
+      <button (click)="onSignOut()" mat-menu-item>
+        <mat-icon>power_settings_new</mat-icon>
+        <span> Cerrar sesión </span>
+      </button>
+    </mat-menu>
+
+  </mat-toolbar-row>
+</mat-toolbar>

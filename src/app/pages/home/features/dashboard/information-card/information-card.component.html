@@ -1,0 +1,18 @@
+<mat-card class="information-card">
+  <mat-card-content fxLayout="row" fxLayoutAlign="space-between">
+    <mat-icon class="information-card__card-icon">{{icon}}</mat-icon>
+    <div fxLayout="column" fxLayoutGap="0.5rem">
+      <span class="f4 tr">{{title}}</span>
+      <span class="bold tr f2">{{value}}</span>
+    </div>
+  </mat-card-content>
+  <mat-divider class="relative"></mat-divider>
+  <mat-card-footer fxLayoutAlign="flex-start center">
+    <button class="pa0" mat-button>
+          <span fxLayout="row" fxLayoutAlign="flex-start center" fxLayoutGap="0.5rem">
+            <mat-icon>{{buttonIcon}}</mat-icon>
+            <span>{{buttonText}}</span>
+          </span>
+    </button>
+  </mat-card-footer>
+</mat-card>

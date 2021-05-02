@@ -1,0 +1,14 @@
+<div class="template-confirmation-modal" fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="1rem">
+  <h2 class="template-confirmation-modal__title">{{title}}</h2>
+
+  <p *ngIf="message" class="template-confirmation-modal__message">{{message}}</p>
+
+  <div class="template-confirmation-modal__actions">
+    <button (click)="modal.close(false)"
+            class="template-confirmation-modal__actions__button" color="primary" mat-stroked-button>No
+    </button>
+    <button (click)="modal.close(true)"
+            class="template-confirmation-modal__actions__button" color="primary" mat-flat-button>Si
+    </button>
+  </div>
+</div>

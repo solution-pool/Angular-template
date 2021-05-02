@@ -1,0 +1,98 @@
+<div fxLayout="column" fxLayoutGap="1rem">
+
+  <h1>Charts with ngx-charts package</h1>
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign.gt-xs="space-around" fxLayoutGap.lt-sm="1rem">
+    <mat-card fxFlex="48%">
+      <mat-card-header>
+        <mat-card-title>Line chart</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <ngx-charts-line-chart
+          [legend]="true"
+          [results]="multi"
+          [scheme]="colorScheme"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [timeline]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          autoScale="true"
+          legendPosition="below"
+          xAxisLabel="Year"
+          yAxisLabel="Population">
+        </ngx-charts-line-chart>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card fxFlex="48%">
+      <mat-card-header>
+        <mat-card-title>Bar chart</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <ngx-charts-bar-vertical
+          [gradient]="false"
+          [legend]="true"
+          [results]="single"
+          [scheme]="colorScheme"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          legendPosition="below"
+          xAxisLabel="Year"
+          yAxisLabel="Population">
+        </ngx-charts-bar-vertical>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign.gt-xs="space-around" fxLayoutGap.lt-sm="1rem">
+    <mat-card fxFlex="48%">
+      <mat-card-header>
+        <mat-card-title>Pie chart</mat-card-title>
+      </mat-card-header>
+      <mat-card-content fxLayout="column">
+        <ngx-charts-pie-chart
+          [doughnut]="false"
+          [gradient]="false"
+          [labels]="true"
+          [legend]="true"
+          [results]="single"
+          [scheme]="colorScheme"
+          legendPosition="below">
+        </ngx-charts-pie-chart>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card fxFlex="48%">
+      <mat-card-header>
+        <mat-card-title>Doughnut pie chart</mat-card-title>
+      </mat-card-header>
+      <mat-card-content fxLayout="column">
+        <ngx-charts-pie-chart
+          [doughnut]="true"
+          [gradient]="false"
+          [labels]="true"
+          [legend]="true"
+          [results]="single"
+          [scheme]="colorScheme"
+          legendPosition="below">
+        </ngx-charts-pie-chart>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Number cards chart</mat-card-title>
+    </mat-card-header>
+    <mat-card-content fxLayout="row wrap">
+      <ngx-charts-number-card
+        [results]="single"
+        [scheme]="colorScheme"
+        cardColor="#232837">
+      </ngx-charts-number-card>
+    </mat-card-content>
+  </mat-card>
+</div>

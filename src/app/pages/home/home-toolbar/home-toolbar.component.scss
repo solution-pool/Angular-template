@@ -1,0 +1,28 @@
+.home-toolbar {
+  height: 66px;
+
+  &__row {
+    height: 66px;
+    padding: 16px;
+  }
+
+  &__logo {
+    margin-left: 8px;
+    text-decoration: none;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  &__name {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .home-toolbar {
+    &__logo {
+      font-size: 12px;
+    }
+  }
+}

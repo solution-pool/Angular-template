@@ -1,0 +1,11 @@
+.dark-theme {
+
+  .pagination-next a, .pagination-previous a, span {
+    color: #ffffff !important;
+  }
+
+  .pagination-next, .pagination-previous a {
+    border-radius: 4px !important;
+    outline: none !important;
+  }
+}

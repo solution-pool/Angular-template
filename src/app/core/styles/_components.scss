@@ -1,0 +1,36 @@
+mat-card {
+  box-sizing: border-box !important;
+  padding: 1rem !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+pagination-controls {
+  margin-top: 1rem;
+  width: calc(100% - 16px - 16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .current {
+    background: #d2d2d2 !important;
+    border-radius: 4px !important;
+  }
+
+  .pagination-next a, .pagination-previous a, span {
+    color: #3e3e3e !important;
+  }
+
+  .pagination-next, .pagination-previous a {
+    border-radius: 4px !important;
+    outline: none !important;
+  }
+}
+
+.simplebar-track.simplebar-horizontal {
+  display: none;
+}
+
+.simplebar-content {
+  overflow-x: hidden;
+}

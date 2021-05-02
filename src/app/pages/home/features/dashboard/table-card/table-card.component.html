@@ -1,0 +1,34 @@
+<mat-card class="table-card">
+  <mat-card-header>
+    <mat-card-title>{{title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <ngx-simplebar [options]="{autoHide: false, scrollbarMinSize: 100}" style="overflow-x: hidden">
+      <mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef templateCell> No.</mat-header-cell>
+          <mat-cell *matCellDef="let element, let index = index" templateCell> {{index + 1}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef templateCell> Name</mat-header-cell>
+          <mat-cell *matCellDef="let element" templateCell>{{element.name}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="jobTitle">
+          <mat-header-cell *matHeaderCellDef templateCell> Username</mat-header-cell>
+          <mat-cell *matCellDef="let element" templateCell>{{element.jobTitle}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="salary">
+          <mat-header-cell *matHeaderCellDef templateCell> Salary</mat-header-cell>
+          <mat-cell *matCellDef="let element" templateCell>{{element.salary}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true" templateHeaderRow></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+    </ngx-simplebar>
+  </mat-card-content>
+</mat-card>

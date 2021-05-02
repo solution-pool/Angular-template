@@ -1,0 +1,42 @@
+<div class="tables" fxLayout="column" fxLayoutGap="1rem">
+
+  <h1>Table with pagination (with ngx-pagination)</h1>
+
+  <mat-table [dataSource]="dataSource | paginate:{ itemsPerPage: size, currentPage: page}">
+
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef templateCell> No.</mat-header-cell>
+      <mat-cell *matCellDef="let element, let index = index" templateCell> {{index + 1}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef templateCell> Name</mat-header-cell>
+      <mat-cell *matCellDef="let element" templateCell>{{element.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="alias">
+      <mat-header-cell *matHeaderCellDef templateCell>Alias</mat-header-cell>
+      <mat-cell *matCellDef="let element" templateCell>{{element.alias}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="city">
+      <mat-header-cell *matHeaderCellDef templateCell>City</mat-header-cell>
+      <mat-cell *matCellDef="let element" templateCell>{{element.city}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="publisher">
+      <mat-header-cell *matHeaderCellDef templateCell>Publisher</mat-header-cell>
+      <mat-cell *matCellDef="let element" templateCell>{{element.publisher}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true" templateHeaderRow></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+
+  <pagination-controls (pageChange)="page = $event"
+                       autoHide="true"
+                       nextLabel="Next"
+                       previousLabel="Previous"
+                       responsive="true"></pagination-controls>
+
+</div>

@@ -1,0 +1,87 @@
+<div fxLayout="column" fxLayoutGap="1rem">
+
+  <h1>Charts with Charts.js library</h1>
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign.gt-xs="space-around" fxLayoutGap.lt-sm="1rem">
+    <mat-card fxFlex="48%">
+      <mat-card-header>
+        <mat-card-title>Line chart</mat-card-title>
+      </mat-card-header>
+      <canvas [colors]="lineChartColors"
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [legend]="false"
+              [options]="chartOptions"
+              baseChart
+              chartType="line">
+      </canvas>
+    </mat-card>
+
+    <mat-card fxFlex="48%">
+      <mat-card-header>
+        <mat-card-title>Bar chart</mat-card-title>
+      </mat-card-header>
+      <canvas [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [legend]="false"
+              [options]="chartOptions"
+              baseChart
+              chartType="bar">
+      </canvas>
+    </mat-card>
+  </div>
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign.gt-xs="space-around" fxLayoutGap.lt-sm="1rem">
+    <mat-card fxFlex="48%">
+      <mat-card-header>
+        <mat-card-title>Doughnut chart</mat-card-title>
+      </mat-card-header>
+      <canvas [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [options]="chartOptions"
+              baseChart
+              chartType="doughnut">
+      </canvas>
+    </mat-card>
+
+    <mat-card fxFlex="48%">
+      <mat-card-header>
+        <mat-card-title>Radar chart</mat-card-title>
+      </mat-card-header>
+      <canvas [datasets]="radarChartData"
+              [labels]="radarChartLabels"
+              [legend]="false"
+              [options]="chartOptions"
+              baseChart
+              chartType="radar">
+      </canvas>
+    </mat-card>
+  </div>
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign.gt-xs="space-around" fxLayoutGap.lt-sm="1rem">
+    <mat-card fxFlex="48%">
+      <mat-card-header>
+        <mat-card-title>Pie chart</mat-card-title>
+      </mat-card-header>
+      <canvas [data]="pieChartData"
+              [labels]="pieChartLabels"
+              [options]="chartOptions"
+              baseChart
+              chartType="pie">
+      </canvas>
+    </mat-card>
+
+    <mat-card fxFlex="48%">
+      <mat-card-header>
+        <mat-card-title>Bubble chart</mat-card-title>
+      </mat-card-header>
+      <canvas [datasets]="bubbleChartData"
+              [legend]="false"
+              [options]="bubbleChartOptions"
+              baseChart
+              chartType="bubble">
+      </canvas>
+    </mat-card>
+  </div>
+
+</div>

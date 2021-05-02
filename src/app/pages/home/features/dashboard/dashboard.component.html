@@ -1,0 +1,57 @@
+<div class="dashboard" fxLayout="column" fxLayoutGap="1rem">
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="space-between"
+       fxLayoutGap.lt-sm="1rem">
+    <app-information-card buttonIcon="sync"
+                          buttonText="Update"
+                          fxFlex="24%" fxFlex.lt-sm="auto"
+                          icon="language"
+                          title="Disk space"
+                          value="150GB"></app-information-card>
+
+    <app-information-card buttonIcon="sync"
+                          buttonText="update"
+                          fxFlex="24%" fxFlex.lt-sm="auto"
+                          icon="account_circle"
+                          title="Users"
+                          value="+150"></app-information-card>
+
+    <app-information-card buttonIcon="verified_user"
+                          buttonText="Verify"
+                          fxFlex="24%" fxFlex.lt-sm="auto"
+                          icon="error"
+                          title="Errors"
+                          value="10"></app-information-card>
+
+    <app-information-card buttonIcon="calendar_today"
+                          buttonText="Last revenue"
+                          fxFlex="24%" fxFlex.lt-sm="auto"
+                          icon="monetization_on"
+                          title="Profits"
+                          value="$1.500"></app-information-card>
+  </div>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Monthly profits</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="h-300">
+      <canvas [colors]="lineChartColors"
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [legend]="false"
+              [options]="chartOptions"
+              baseChart
+              chartType="line">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
+
+  <div fxLayout.lt-sm="column" fxLayoutAlign="space-between" fxLayoutGap="row" fxLayoutGap.lt-sm="1rem">
+    <app-tasks-card [tasks]="tasks" class="h-400" fxFlex.gt-xs="30%"></app-tasks-card>
+
+    <app-table-card [dataSource]="dataSource" [displayedColumns]="displayedColumns" class="h-400"
+                    fxFlex.gt-xs="68%" title="Employees"></app-table-card>
+  </div>
+
+</div>

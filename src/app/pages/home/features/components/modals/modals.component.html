@@ -1,0 +1,26 @@
+<div class="modals" fxLayout="column" fxLayoutGap="1rem">
+
+  <h1>Modals</h1>
+
+  <h3>Click to open modal</h3>
+
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="2rem">
+    <button (click)="openModal()" color="primary" mat-flat-button>Open modal</button>
+
+    <button (click)="openConfirmModal()" color="primary" mat-flat-button>Open confirmation modal</button>
+  </div>
+
+</div>
+
+<ng-template #modal>
+  <div fxLayout="column" fxLayoutGap="1rem">
+    <h3>This is a modal</h3>
+
+    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor
+      volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet
+      nisl tempus convallis quis ac lectus. Proin eget tortor risus. Proin eget tortor risus. Vestibulum ac diam sit
+      amet quam vehicula elementum sed sit amet dui.</p>
+
+    <button (click)="modalRef.close()" color="primary" mat-flat-button>Ok</button>
+  </div>
+</ng-template>

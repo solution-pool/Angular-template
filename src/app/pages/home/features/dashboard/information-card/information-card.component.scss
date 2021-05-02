@@ -1,0 +1,10 @@
+.information-card {
+
+  mat-card-footer {
+    margin: 0.5rem 0 0 0 !important;
+  }
+
+  &__card-icon {
+    font-size: 60px;
+  }
+}

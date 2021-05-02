@@ -1,0 +1,60 @@
+<div class="switches-&-tabs" fxLayout="column" fxLayoutGap="1.5rem">
+
+  <h1>Switches</h1>
+
+  <h2>Angular Material switches</h2>
+
+  <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between">
+
+    <div fxFlex="30%" fxLayout="row" fxLayoutGap="1rem">
+      <h3>Primary color: </h3>
+      <mat-slide-toggle color="primary">Switch</mat-slide-toggle>
+    </div>
+
+    <div fxFlex="30%" fxLayout="row" fxLayoutGap="1rem">
+      <h3>Accent color and checked: </h3>
+      <mat-slide-toggle checked="true" color="accent">Switch</mat-slide-toggle>
+    </div>
+
+    <div fxFlex="30%" fxLayout="row" fxLayoutGap="1rem">
+      <h3>Disabled: </h3>
+      <mat-slide-toggle disabled="tue">Switch</mat-slide-toggle>
+    </div>
+
+  </div>
+
+  <h2>Template switches</h2>
+
+  <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between" fxLayoutGap.lt-sm="1rem">
+
+    <div fxFlex="30%" fxLayout="column" fxLayoutGap="1rem">
+      <h3>Off: </h3>
+      <template-switch [off]="off" [on]="on"></template-switch>
+    </div>
+
+    <div fxFlex="30%" fxLayout="column" fxLayoutGap="1rem">
+      <h3>On: </h3>
+      <template-switch [off]="off" [on]="on" value="on"></template-switch>
+    </div>
+
+    <div fxFlex="30%" fxLayout="column" fxLayoutGap="1rem">
+      <h3>Disabled: </h3>
+      <template-switch [off]="off" [on]="on" disabled="true"></template-switch>
+    </div>
+
+  </div>
+
+  <h1>Tabs</h1>
+
+  <h2>Angular Material tabs</h2>
+
+  <mat-tab-group class="50%" fxFlexAlign="center" mat-align-tabs="start">
+    <mat-tab label="First">Content 1</mat-tab>
+    <mat-tab label="Second">Content 2</mat-tab>
+    <mat-tab label="Third">Content 3</mat-tab>
+  </mat-tab-group>
+
+  <h2>Template tabs</h2>
+
+  <template-tab [active]="tabs[1]" [tabs]="tabs" fxFlexAlign="center"></template-tab>
+</div>

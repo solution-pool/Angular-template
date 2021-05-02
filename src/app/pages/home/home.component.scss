@@ -1,0 +1,35 @@
+@import "../../core/styles/dark_theme";
+
+.home {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+
+  &__sidenav-container {
+    flex: 1;
+    height: calc(100vh - 40px - 66px);
+  }
+
+  &__sidebar {
+    width: 291px;
+    background-color: #fafafa;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+
+  &__content {
+    overflow: hidden;
+    position: relative;
+
+    main {
+      padding: 16px 16px 8px 16px;
+      min-height: calc(100vh - 66px - 40px);
+    }
+  }
+
+  &.is-mobile {
+    .home__sidenav-container {
+      flex: 1 0 auto;
+    }
+  }
+}

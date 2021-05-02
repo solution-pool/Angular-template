@@ -1,0 +1,29 @@
+<ul [ngClass]="{'home-sidebar-options--dark': isDarkTheme | async}"
+    class="home-sidebar-options">
+  <li *ngFor="let menu of menus" [ngClass]="{'is-active': activeMenu == menu.id,
+      'is-active-bg': activeMenu == menu.id && menu.submenus?.length > 0 && openSubmenu}"
+      class="home-sidebar-options__menu">
+
+    <a (click)="menuClick(menu, menu.route)"
+       [ngClass]="{'is-active': activeMenu == menu.id,
+        'is-selected': activeMenu == menu.id && menu.submenus?.length > 0 && openSubmenu}"
+       class="home-sidebar-options__menu__nav-option home-sidebar-options__nav-option">
+      <mat-icon *ngIf="menu.icon">{{menu.icon}}</mat-icon>
+      {{menu.name}}
+    </a>
+
+    <div [class.is-open]="activeMenu == menu.id && openSubmenu" class="home-sidebar-options__submenus">
+      <ul>
+        <li *ngFor="let submenu of menu.submenus" [class.is-active]="activeSubmenu == submenu.id"
+            class="home-sidebar-options__menu">
+          <a (click)="submenuClick(submenu.id, submenu.route)" [class.is-active]="activeSubmenu == submenu.id"
+             class="home-sidebar-options__submenus__nav-option home-sidebar-options__nav-option">
+            <mat-icon *ngIf="submenu.icon">{{submenu.icon}}</mat-icon>
+            {{submenu.name}}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </li>
+</ul>

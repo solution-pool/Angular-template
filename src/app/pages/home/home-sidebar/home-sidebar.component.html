@@ -1,0 +1,7 @@
+<div class="home-sidebar" fxLayout="column">
+  <app-home-sidebar-header></app-home-sidebar-header>
+
+  <ngx-simplebar [options]="{autoHide: false, scrollbarMinSize: 100}" fxFlex="calc(100% - 100px)">
+    <app-home-sidebar-options [menus]="menus"></app-home-sidebar-options>
+  </ngx-simplebar>
+</div>

@@ -1,0 +1,23 @@
+<div class="sliders" fxLayout="column" fxLayoutGap="1rem">
+
+  <h1>Notifications</h1>
+
+  <h3>Click to view notifications</h3>
+
+  <div class="w-100" fxFlexAlign="center" fxLayout="row wrap"
+       fxLayout.lt-sm="column" fxLayoutGap.gt-xs="2rem grid" fxLayoutGap.lt-sm="1rem">
+    <div fxFlex.gt-xs="20%">
+      <button (click)="onClick('success')" class="w-100" color="primary" mat-flat-button>Success</button>
+    </div>
+    <div fxFlex.gt-xs="20%">
+      <button (click)="onClick('warning')" class="w-100" color="primary" mat-flat-button>Warning</button>
+    </div>
+    <div fxFlex.gt-xs="20%">
+      <button (click)="onClick('error')" class="w-100" color="primary" mat-flat-button>Error</button>
+    </div>
+    <div fxFlex.gt-xs="20%">
+      <button (click)="onClick('info')" class="w-100" color="primary" mat-flat-button>Info</button>
+    </div>
+  </div>
+
+</div>

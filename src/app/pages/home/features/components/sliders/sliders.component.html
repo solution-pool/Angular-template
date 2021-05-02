@@ -1,0 +1,69 @@
+<div class="sliders" fxLayout="column" fxLayoutGap="1rem">
+
+  <h1>Buttons</h1>
+
+  <h2>Angular Material sliders</h2>
+
+  <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between">
+    <div fxFlex="30%" fxLayout="column" fxLayoutGap="1rem">
+      <h3>Primary color </h3>
+      <mat-slider
+        color="primary"
+        max="100"
+        min="1"
+        step="10"></mat-slider>
+    </div>
+
+    <div fxFlex="30%" fxLayout="column" fxLayoutGap="1rem">
+      <h3>Accent color and thumb label </h3>
+      <mat-slider
+        max="100"
+        min="1"
+        step="10"
+        thumbLabel="true"></mat-slider>
+    </div>
+
+    <div fxFlex="30%" fxLayout="column" fxLayoutGap="1rem">
+      <h3>Disabled </h3>
+      <mat-slider
+        disabled="true"
+        max="100"
+        min="1"
+        step="10"></mat-slider>
+    </div>
+
+  </div>
+
+  <h2>Template slider (based on Angular Material slider)</h2>
+
+  <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between">
+
+    <div fxFlex="30%" fxLayout="column" fxLayoutGap="1rem">
+      <h3>Primary color </h3>
+      <template-slider
+        color="primary"
+        max="100"
+        min="1"
+        step="10"></template-slider>
+    </div>
+
+    <div fxFlex="30%" fxLayout="column" fxLayoutGap="1rem">
+      <h3>Accent color and full value</h3>
+      <template-slider
+        max="100"
+        min="1"
+        step="10"
+        value="100"></template-slider>
+    </div>
+
+    <div fxFlex="30%" fxLayout="column" fxLayoutGap="1rem">
+      <h3>Disabled </h3>
+      <template-slider
+        disabled="true"
+        max="100"
+        min="1"
+        step="10"></template-slider>
+    </div>
+
+  </div>
+</div>

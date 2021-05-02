@@ -1,0 +1,30 @@
+<div class="template-slider" fxLayout="column">
+  <div class="template-slider__header" fxLayout="row">
+    <span class="template-slider__header__instructions">{{instructions}}</span>
+    <span fxFlex></span>
+    <span class="template-slider__units"><strong>{{displayValue ? displayValue : value}}</strong> {{units}}</span>
+  </div>
+
+  <mat-slider (change)="valueChangeEvent($event)"
+              (input)="inputChangeEvent($event)"
+              [(value)]="value"
+              [class.is-full]="value == max"
+              [color]="color"
+              [disabled]="disabled"
+              [max]="max"
+              [min]="min"
+              [step]="step"
+              class="template-slider__slider">
+  </mat-slider>
+
+  <div class="template-slider__footer" fxLayout="row" fxLayoutAlign="space-between">
+    <span #minWrapper [class.is-hidden]="!showMinWrapper">
+    <ng-content select="min"></ng-content>
+    </span>
+    <span *ngIf="minWrapper.children.length == 0">{{displayMin ? displayMin : min}}</span>
+    <span #maxWrapper [class.is-hidden]="!showMaxWrapper">
+    <ng-content select="max"></ng-content>
+    </span>
+    <span *ngIf="maxWrapper.children.length == 0">{{displayMax ? displayMax : max}}</span>
+  </div>
+</div>

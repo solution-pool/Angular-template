@@ -1,0 +1,8 @@
+<div (@slideInOut.done)="onAnimationDone($event)" *ngIf="show"
+     [@slideInOut] [ngClass]="{'template-toast--success': data.type === 'success',
+       'template-toast--warning': data.type === 'warning',
+        'template-toast--error': data.type === 'error',
+         'template-toast--info' : data.type === 'info'}"
+     class="template-toast">
+  <span class="template-toast__message">{{ data.text }}</span>
+</div>

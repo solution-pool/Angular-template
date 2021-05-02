@@ -1,0 +1,13 @@
+<div class="template-switch">
+  <label [class.is-checked]="value === 'off'" class="template-switch__label template-switch__off">
+    <input (click)="isOptionSelected('off')" (keydown.enter)="isOptionSelected('off')" [disabled]="disabled" checked
+           class="template-switch__input"
+           name="view" type="radio">
+    {{off.name}}</label>
+  <label [class.is-checked]="value === 'on'" class="template-switch__label template-switch__on">
+    <input (click)="isOptionSelected('on')" (keydown.enter)="isOptionSelected('on')" [disabled]="disabled"
+           class="template-switch__input"
+           name="view" type="radio">
+    {{on.name}}</label>
+  <span [class.is-disabled]="disabled" class="template-switch__selection"></span>
+</div>

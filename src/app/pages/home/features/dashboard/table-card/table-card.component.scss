@@ -1,0 +1,23 @@
+.table-card {
+  height: 100%;
+
+  mat-cell, mat-header-cell {
+
+    &:first-child {
+      flex: 10% !important;
+    }
+
+    &:nth-child(2) {
+      flex: 35% !important;
+    }
+
+    &:nth-child(3) {
+      flex: 35% !important;
+    }
+
+    &:last-child {
+      flex: 20% !important;
+    }
+
+  }
+}
